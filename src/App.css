@@ -1,38 +1,83 @@
-.App {
-  text-align: center;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #111827; /* Dark Background */
+  color: white; /* White Text */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+h1 {
+  color: #ffcc00; /* Yellow */
+  font-size: 3rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h2 {
+  color: #00ff99; /* Green */
+  font-size: 2rem;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+button {
+  background-color: #ff5733;
   color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 
-.App-link {
-  color: #61dafb;
+button:hover {
+  background-color: #c70039;
+  transform: scale(1.1);
+}
+.name-glow {
+  color: white;
+  text-shadow: 0 0 5px #00eaff, 0 0 10px #00eaff, 0 0 20px #00eaff;
+  animation: glow 1.5s infinite alternate;
 }
 
-@keyframes App-logo-spin {
+@keyframes glow {
   from {
-    transform: rotate(0deg);
+    text-shadow: 0 0 5px #00eaff, 0 0 10px #00eaff;
   }
   to {
-    transform: rotate(360deg);
+    text-shadow: 0 0 10px #00eaff, 0 0 20px #00eaff, 0 0 30px #00eaff;
   }
 }
+
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  button {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}
+  
+
+
+/* Ensure the full page is divided properly */
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* This will take the remaining space and push the footer down */
+main {
+  flex: 1;
+  padding-bottom: 50px; /* Adjust spacing */
+}
+
+
+.footer-bg {
+  background-color: #111827 !important; /* Dark Gray */
+}
+
+
