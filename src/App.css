@@ -3,9 +3,11 @@
 @tailwind utilities;
 
 body {
-  background-color: #111827; /* Dark Background */
-  color: white; /* White Text */
-}
+  /* background: linear-gradient(135deg, #232526, #414345); */
+  background: linear-gradient( 135deg, #d17b8f, #b4ee88);
+
+  /* color: white; /* White Text */
+} */
 
 
 h1 {
